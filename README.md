@@ -34,18 +34,39 @@ Alat produktivitas tim untuk mengelola workflow proyek secara visual. Dilengkapi
 
 ## 🚀 Cara Menjalankan Proyek
 
-Buka terminal di folder ini:
+### 1. Prasyarat
+Pastikan Anda sudah menginstal **[Node.js](https://nodejs.org/)** (disarankan versi LTS v18 ke atas) dan **npm** di komputer Anda.
+
+### 2. Instalasi Dependensi (Build `node_modules`)
+Sebelum menjalankan server, unduh dan pasang semua modul dependensi proyek:
 ```bash
-# Jalankan mode development
+# Menginstall seluruh modul/dependensi
+npm install
+```
+> **Catatan:** Jika Anda ingin instalasi bersih yang persis sesuai dengan `package-lock.json`, gunakan perintah:
+> ```bash
+> npm ci
+> ```
+
+### 3. Jalankan Mode Development
+Setelah `node_modules` selesai terinstal, jalankan server pengembang:
+```bash
 npm run dev
 ```
 
-Aplikasi akan otomatis terbuka atau dapat diakses di:
-👉 `http://localhost:3000`
+Aplikasi akan otomatis berjalan dan dapat diakses di browser pada:
+👉 `http://localhost:3000` (atau port yang tertera di terminal)
 
-Untuk build produksi:
+---
+
+### 4. Build untuk Produksi
+Jika ingin mengompilasi proyek untuk keperluan deployment / rilis produksi:
 ```bash
+# Build file produksi ke folder dist
 npm run build
+
+# Meninjau (preview) hasil build produksi secara lokal
+npm run preview
 ```
 
 ---
